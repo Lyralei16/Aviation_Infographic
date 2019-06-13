@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="main.js"></script>
   <link  rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'><link>
 </head>
 <body>
@@ -18,17 +19,25 @@
   
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">
+    <div id="right-col" class="col-sm-4">
       <h3>Column 1</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </div>
-    <div class="col-sm-4">
+    <div  id="middle-col" class="col-sm-4">
       <h3>Column 2</h3>
+      <label>Select the Airport:</label>
+      <select id="airportselect" name="airpot">
+        <!-- <option value="0">Amsterdam</option>
+        <option value="1">Rotterdam</option>
+        <option value="2">Eindhoven</option>
+        <option value="3">Groningen</option> -->
+        
+      </select>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </div>
-    <div class="col-sm-4">
+    <div  id="left-col" class="col-sm-4">
       <h3>Column 3</h3>        
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
