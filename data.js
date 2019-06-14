@@ -30,7 +30,7 @@ async function InitData() {
     topicsByKey = dictionaryFromArray(topicData, "Key", "Topic");
     topicGroupsById = dictionaryFromArray(topicData, "ID", "TopicGroup");
     dataSet = await getData("https://opendata.cbs.nl/ODataApi/odata/37478eng/TypedDataSet");
-    
+
     console.log("Data successfully initialized!");
 }
 
@@ -76,9 +76,9 @@ function dictionaryFromArray(dataArr, sortingKey = "Key", sortForTypeOf) {
  * @param {string} propertyName 
  * @param {*} ownPropertyValue 
  */
-function getTopicId(propertyName, ownPropertyValue){
+function getTopicId(propertyName, ownPropertyValue) {
     topicData.forEach(elem, function () {
-        if(elem[propertyName] == ownPropertyValue) {
+        if (elem[propertyName] == ownPropertyValue) {
             return elem.ID;
         }
     });
@@ -92,8 +92,8 @@ function getTopicId(propertyName, ownPropertyValue){
 function getSubTopics(topicGroupId) {
     var subTopics;
 
-    topicData.forEach(elem, function(){
-        if(elem.ParentID == topicGroupId) subTopics[elem.ID] = elem.Title;
+    topicData.forEach(elem, function () {
+        if (elem.ParentID == topicGroupId) subTopics[elem.ID] = elem.Title;
     });
 
     return subTopics;

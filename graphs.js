@@ -11,7 +11,7 @@ function drawLineChart(content, type, placementID) {
     var chart = new Chart(ctx, {
         // The type of chart we want to create
         type: type,
-        
+
         // The data for our dataset
         data: {
             labels: content.Lables,
@@ -26,7 +26,7 @@ function drawLineChart(content, type, placementID) {
         // Configuration options go here
         options: {
             title: {
-                display:"true",
+                display: "true",
                 text: content.Category,
             }
         }

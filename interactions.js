@@ -142,7 +142,7 @@ function generateTableByTopic(topicKey, insertId) {
  */
 function topicByAirport(topicKey, airportKey) {
 
-// this is a template for all the needed values 
+    // this is a template for all the needed values 
     var content = {
         Category: "",
         Title: "",
