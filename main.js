@@ -20,12 +20,10 @@ $(document).ready(async function () {
             // console.log(Object.keys(topicsByKey)[5]);
 
 
-            // passing the keys of topic and aiports to the newdata variable 
+            //testing data layout
             var newdata = topicByAirport(Object.keys(topicsByKey)[5], Object.keys(airportsByKey)[2]);
-            // Creating various graphs 
-            drawLineChart(newdata, "line", "canvas1");
-            drawLineChart(newdata, "bar", "canvas2");
-            drawLineChart(newdata, "doughnut", "canvas3");
+
+            refresh(newdata);
 
             //error handler 
         }).catch(function (error) {
@@ -34,3 +32,11 @@ $(document).ready(async function () {
 
 
 });
+
+
+function refresh (data) {
+    // Creating various graphs 
+    drawLineChart(data, "line", "canvas1");
+    drawLineChart(data, "bar", "canvas2");
+    drawLineChart(data, "doughnut", "canvas3");
+}

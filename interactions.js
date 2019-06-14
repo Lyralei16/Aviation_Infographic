@@ -27,11 +27,12 @@ function insertNames(dataHolder, selectorId, ignoreKeysContaining) {
         if (ignoreKeysContaining != undefined && labelKey.includes(ignoreKeysContaining)) {
             continue;
         }
-
+        nextOption.value = keyCodes[i];
         nextOption.innerHTML = dataValue[i];
         select.append(nextOption);
     }
 }
+
 /**
  * The function sets up a table according to given dictionary, 
  * with a specified selector, with any HTML element available
