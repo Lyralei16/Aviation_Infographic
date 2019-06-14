@@ -71,7 +71,8 @@ function dictionaryFromArray(dataArr, sortingKey = "Key", sortForTypeOf) {
 }
 
 /**
- * Loops through topicData and returns an id if an object with matching property and value was found
+ * Loops through topicData and returns an id 
+ * if an object with matching property and value was found
  * @param {string} propertyName 
  * @param {*} ownPropertyValue 
  */
@@ -85,8 +86,8 @@ function getTopicId(propertyName, ownPropertyValue){
 }
 
 /**
- * 
- * @param {int} topicGroupId 
+ * sorts topic groups and returns subtopics 
+ * @param {int} topicGroupId key value of the 
  */
 function getSubTopics(topicGroupId) {
     var subTopics;
