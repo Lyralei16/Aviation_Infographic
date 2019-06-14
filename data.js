@@ -1,3 +1,9 @@
+/**
+ * Here data is withdrawn and sorted
+ * Dictionaries are created 
+ * Convenient data arrays 
+ */
+
 // Data arrays
 var periodsData = [];
 var airportData = [];

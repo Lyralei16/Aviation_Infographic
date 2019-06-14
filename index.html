@@ -1,56 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Infographic Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <link  rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'><link>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
   <script src="main.js"></script>
   <script src="data.js"></script>
   <script src="interactions.js"></script>
+  <script src="graphs.js"></script>
 
-  
+
 </head>
+
 <body>
 
-<div class="jumbotron text-center">
-  <h1>Data about Airplanes in The Netherlands</h1>
-  <p>Annual report about blah blah blha i dont care</p> 
-</div>
-  
-<div class="container">
-  <div class="row">
-    <div id="right-col" class="col-sm-4">
-      <h3>Column 1</h3>
-      <label>Select the Period:</label>
-      <select id="periodselect" name="period">
-      </select>
-      <p>Choose the period </p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div  id="middle-col" class="col-sm-4">
-      <h3>Column 2</h3>
-      <label>Select the Airport:</label>
-      <select id="airportselect" name="airpot">
-      </select>
-      <p>Choose the location of the airport</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div  id="left-col" class="col-sm-4">
-      <h3>Column 3</h3>
-      <select id="topicselect" name="topic">
-      </select>    
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
+    <canvas id="canvas1" width="900" height="500">
+      </canvas>
+
+      <canvas id="canvas2" width="900" height="500">
+        </canvas>
+
+        <canvas id="canvas3" width="900" height="500">
+          </canvas>
+
+  <div class="jumbotron text-center">
+    <h1>Aviation in The Netherlands</h1>
+    <p>Data on flight movements, passengers, cargo and mail at Dutch airports.</p>
   </div>
-</div>
+
+  <div class="container">
+    <div class="row">
+      <div id="right-col" class="col-sm-4">
+        <h3>Column 1</h3>
+        <label>Select the Period:</label>
+        <select id="periodselect" name="period">
+        </select>
+        <p>Choose the period </p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div id="middle-col" class="col-sm-4">
+        <h3>Column 2</h3>
+        <label>Select the Airport:</label>
+        <select id="airportselect" name="airpot">
+        </select>
+        <p>Choose the location of the airport</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div id="left-col" class="col-sm-4">
+        <h3>Column 3</h3>
+        <select id="topicselect" name="topic">
+        </select>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      </div>
+      <div class="container" contenteditable="true">
+        
+        <section id="table-container">
+          <table id="table">
+            <td id="location">Airports</td>
+            <tr>
+              <th>Year</th>
+              <th>Location</th>
+              <th>Cathegory</th>
+            </tr>
+            <tr>
+              <td id="year">Here are years displayed</td>
+
+            </tr>
+          </table>
+
+        </section>
+      </div>
+    </div>
+
+  </div>
 
 </body>
+
 </html>
